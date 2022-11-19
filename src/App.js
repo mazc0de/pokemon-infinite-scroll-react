@@ -13,7 +13,7 @@ const App = () => {
     const [loading, setLoading] = useState(true);
     const [nextPage, setNextPage] = useState(null);
 
-    const { modalShow, setModalShow, detailPokemonData, setDetailPokemonData } = useContext(AppContext);
+    const { setModalShow, setDetailPokemonData } = useContext(AppContext);
 
     const observer = useRef();
     const lastPokemonRef = useCallback(
@@ -90,7 +90,6 @@ const App = () => {
         <>
             <div className="w-full min-h-min flex  justify-center items-center pt-10">
                 <PokemonLogo className="w-96 h-20" />
-                {/* <Loading /> */}
             </div>
             <div className="w-full min-h-screen p-10 flex justify-center items-center flex-wrap gap-5">
                 <Modal />
