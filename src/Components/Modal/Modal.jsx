@@ -44,9 +44,13 @@ const Modal = () => {
                                     <p className="font-poppins font-bold leading-1 text-gray-400">#{detailPokemonData.data.id}</p>
                                     <p className="font-poppins uppercase font-bold">{detailPokemonData?.data?.name}</p>
                                     <p className="font-poppins">
-                                        <span className={`text-black text-sm font-semibold mr-2 px-2.5 py-0.5 rounded capitalize`} style={{ backgroundColor: colors[detailPokemonData?.data?.types[0]?.type?.name] }}>
-                                            {detailPokemonData?.data?.types[0]?.type?.name}
-                                        </span>
+                                        {detailPokemonData?.data?.types.map((item) => {
+                                            return (
+                                                <span className={`text-black text-sm font-semibold mr-2 px-2.5 py-0.5 rounded capitalize`} style={{ backgroundColor: colors[item.type.name] }}>
+                                                    {item.type.name}
+                                                </span>
+                                            );
+                                        })}
                                     </p>
                                 </div>
                             </div>

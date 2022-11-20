@@ -1,7 +1,6 @@
 import { colors } from "../../Utils/colorsPokemonTypes";
 
 const PokemonCard = ({ id, name, img, type }) => {
-    // const { name, img, type } = pokemon;
     return (
         <>
             <div className={`w-96 h-32 bg-sky-200 rounded-md flex items-center shadow-sm ease-in-out duration-200 cursor-pointer hover:shadow-lg`}>
